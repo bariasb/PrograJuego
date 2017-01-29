@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class InterfazPicDice
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,77 +22,83 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Jugador1 = New System.Windows.Forms.TextBox()
+        Me.Maquina = New System.Windows.Forms.TextBox()
+        Me.lbldado1 = New System.Windows.Forms.TextBox()
+        Me.Puntaje = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Jugador = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Sumatoria = New System.Windows.Forms.Label()
+        Me.PicDado = New System.Windows.Forms.PictureBox()
+        Me.Perdio = New System.Windows.Forms.TextBox()
+        CType(Me.PicDado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'Jugador1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(75, 73)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.Jugador1.Location = New System.Drawing.Point(125, 37)
+        Me.Jugador1.Name = "Jugador1"
+        Me.Jugador1.Size = New System.Drawing.Size(100, 20)
+        Me.Jugador1.TabIndex = 0
         '
-        'TextBox2
+        'Maquina
         '
-        Me.TextBox2.Location = New System.Drawing.Point(189, 117)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.Maquina.Location = New System.Drawing.Point(387, 37)
+        Me.Maquina.Name = "Maquina"
+        Me.Maquina.Size = New System.Drawing.Size(100, 20)
+        Me.Maquina.TabIndex = 1
         '
-        'TextBox3
+        'lbldado1
         '
-        Me.TextBox3.Location = New System.Drawing.Point(306, 70)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 2
+        Me.lbldado1.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.lbldado1.ForeColor = System.Drawing.SystemColors.Window
+        Me.lbldado1.Location = New System.Drawing.Point(308, 283)
+        Me.lbldado1.Name = "lbldado1"
+        Me.lbldado1.Size = New System.Drawing.Size(100, 20)
+        Me.lbldado1.TabIndex = 2
+        Me.lbldado1.Text = "DADO1"
         '
-        'TextBox4
+        'Puntaje
         '
-        Me.TextBox4.Location = New System.Drawing.Point(189, 160)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 3
+        Me.Puntaje.Location = New System.Drawing.Point(27, 198)
+        Me.Puntaje.Name = "Puntaje"
+        Me.Puntaje.Size = New System.Drawing.Size(100, 20)
+        Me.Puntaje.TabIndex = 3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(88, 249)
+        Me.Button1.Location = New System.Drawing.Point(288, 309)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(138, 58)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Spin"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(306, 249)
+        Me.Button2.Location = New System.Drawing.Point(27, 327)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 5
         Me.Button2.Text = "Stop"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label1
+        'Jugador
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(88, 54)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Label1"
+        Me.Jugador.AutoSize = True
+        Me.Jugador.Location = New System.Drawing.Point(146, 60)
+        Me.Jugador.Name = "Jugador"
+        Me.Jugador.Size = New System.Drawing.Size(54, 13)
+        Me.Jugador.TabIndex = 6
+        Me.Jugador.Text = "Jugador 1"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(380, 54)
+        Me.Label2.Location = New System.Drawing.Point(448, 221)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 7
@@ -101,51 +107,74 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(259, 117)
+        Me.Label3.Location = New System.Drawing.Point(417, 60)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.Size = New System.Drawing.Size(48, 13)
         Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Label3"
+        Me.Label3.Text = "Maquina"
         '
-        'Label4
+        'Sumatoria
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(262, 163)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Label4"
+        Me.Sumatoria.AutoSize = True
+        Me.Sumatoria.Location = New System.Drawing.Point(48, 234)
+        Me.Sumatoria.Name = "Sumatoria"
+        Me.Sumatoria.Size = New System.Drawing.Size(54, 13)
+        Me.Sumatoria.TabIndex = 9
+        Me.Sumatoria.Text = "Sumatoria"
         '
-        'Form1
+        'PicDado
+        '
+        Me.PicDado.Location = New System.Drawing.Point(308, 198)
+        Me.PicDado.Name = "PicDado"
+        Me.PicDado.Size = New System.Drawing.Size(100, 72)
+        Me.PicDado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicDado.TabIndex = 10
+        Me.PicDado.TabStop = False
+        '
+        'Perdio
+        '
+        Me.Perdio.Location = New System.Drawing.Point(172, 126)
+        Me.Perdio.Name = "Perdio"
+        Me.Perdio.Size = New System.Drawing.Size(254, 20)
+        Me.Perdio.TabIndex = 11
+        '
+        'InterfazPicDice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(551, 307)
-        Me.Controls.Add(Me.Label4)
+        Me.BackColor = System.Drawing.Color.GreenYellow
+        Me.ClientSize = New System.Drawing.Size(625, 382)
+        Me.Controls.Add(Me.Perdio)
+        Me.Controls.Add(Me.PicDado)
+        Me.Controls.Add(Me.Sumatoria)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Jugador)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Controls.Add(Me.Puntaje)
+        Me.Controls.Add(Me.lbldado1)
+        Me.Controls.Add(Me.Maquina)
+        Me.Controls.Add(Me.Jugador1)
+        Me.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Name = "InterfazPicDice"
+        Me.Text = "InterfazPicDice"
+        CType(Me.PicDado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Jugador1 As TextBox
+    Friend WithEvents Maquina As TextBox
+    Friend WithEvents lbldado1 As TextBox
+    Friend WithEvents Puntaje As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Jugador As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents Sumatoria As Label
+    Friend WithEvents PicDado As PictureBox
+    Friend WithEvents Perdio As TextBox
 End Class
